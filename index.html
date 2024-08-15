@@ -4,21 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>광복절 태극기</title>
-    <style>
-        body{
-            margin: 0;
-            padding: 0;
-        }
-        canvas{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-    </style>
+    <link rel="stylesheet" href="./src/style.css">
 </head>
 <body>
+    <button id="canvasBtn">캔버스로 만든 태극기</button>
+    <button id="cssBtn">[번외] CSS로 만든 태극기</button>
     <canvas id="taegeukgi"></canvas>
+    <section>
+        <div class="taegeuk">
+            <div class="big-red"></div>
+            <div class="big-blue"></div>
+            <div class="small-red"></div>
+            <div class="small-blue"></div>
+        </div>
+        <div class="gungon">
+            <div class="stick gun-1"></div>
+            <div class="stick gun-2"></div>
+            <div class="stick gun-3"></div>
+            <div class="stick gon-1 cutter"></div>
+            <div class="stick gon-2 cutter"></div>
+            <div class="stick gon-3 cutter"></div>
+        </div>
+        <div class="gamli">
+            <div class="stick gam-1"></div>
+            <div class="stick gam-2 cutter"></div>
+            <div class="stick gam-3"></div>
+            <div class="stick li-1 cutter"></div>
+            <div class="stick li-2 "></div>
+            <div class="stick li-3 cutter"></div>
+        </div>
+    </section>
     <script src="./src/taegeuk.js"></script>
 </body>
 </html>

@@ -1,3 +1,5 @@
+const cssSection = document.querySelector('section')
+
 const canvas = document.getElementById('taegeukgi')
 const ctx = canvas.getContext('2d')
 
@@ -24,7 +26,6 @@ function drawBackGround () {
     ctx.lineWidth = 5
     ctx.strokeRect(0, 0, canvas.width, canvas.height)
 }
-drawBackGround()
 
 function drawGuideline () {
     ctx.lineWidth = 1
@@ -80,7 +81,7 @@ function drawTaegeuk () {
    ctx.fill()
 }
 
-drawTaegeuk()
+
 
 function drawSagwae () {
     const circleR = s / 2
@@ -136,4 +137,24 @@ function drawSagwae () {
     ctx.fillRect(rightX + betweenGap * 2 - 1, - gwaeGap / 2, width+2, gwaeGap)
 }
 
-drawSagwae()
+function reset() {
+    ctx.clearRect(0,0,canvas.width, canvas.height)
+}
+
+function starter() {
+    drawBackGround()
+    drawTaegeuk()
+    drawSagwae()
+}
+starter()
+
+const canvasBtn = document.getElementById('canvasBtn')
+canvasBtn.addEventListener('click', () => {
+    canvas.style.visibility = 'visible'
+    cssSection.style.visibility = 'hidden'
+})
+const cssBtn = document.getElementById('cssBtn')
+cssBtn.addEventListener('click', () => {
+    cssSection.style.visibility = 'visible'
+    canvas.style.visibility = 'hidden'
+})
